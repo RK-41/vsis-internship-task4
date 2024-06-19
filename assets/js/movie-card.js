@@ -1,0 +1,49 @@
+'use strict';
+
+import { imageBaseURL } from './api.js';
+
+/*
+ * Movie Card
+ */
+
+export function createMovieCard(movie) {
+	const { poster_path, title, vote_average, release_date, id } = movie;
+
+	const card = document.createElement('div');
+	card.classList.add('movie-card');
+
+	card.innerHTML = `
+		<div class="movie-card">
+			<figure class="poster-box card-banner">
+				<img
+					src="${imageBaseURL}w500${poster_path}"
+					alt="${title}"
+					class="img-cover"
+					loading="lazy"
+				/>
+			</figure>
+
+			<h4 class="title">${title}</h4>
+
+			<div class="meta-list">
+				<div class="meta-item">
+					<img
+						src="./assets/images/star.png"
+						width="20"
+						height="20"
+						loading="lazy"
+						alt="rating"
+					/>
+
+					<span class="span">${vote_average}</span>
+				</div>
+
+				<div class="card-badge">${release_date}</div>
+			</div>
+
+			<a href="./detail.html" class="card-btn" title="${title}" onClick="getMovieDetail(${id})"></a>
+		</div>
+	`;
+
+	return card;
+}

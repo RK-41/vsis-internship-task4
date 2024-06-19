@@ -3,7 +3,9 @@
 // Events for multiple elements
 
 const addEventOnElements = function (elements, eventType, callback) {
-	for (const elem of elements) elem.addEventListener(eventType, callback);
+	for (const element of elements) {
+		element.addEventListener(eventType, callback);
+	}
 };
 
 // Toggle search box in mobile devive (small screen)
@@ -14,3 +16,11 @@ const searchTogglers = document.querySelectorAll('[search-toggler]');
 addEventOnElements(searchTogglers, 'click', function () {
 	searchBox.classList.toggle('active');
 });
+
+/*
+  Storing movieId in 'localStorage' when movieCard is clicked
+*/
+
+const getMovieDetail = function (movieId) {
+	window.localStorage.setItem('movieId', String(movieId));
+};
