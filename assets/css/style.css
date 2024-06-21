@@ -120,8 +120,6 @@ body {
 	color: var(--on-background);
 	font-size: var(--fs-body);
 	line-height: 1.5;
-	height: 300vh;
-	width: 200vh;
 }
 
 :focus-visible {
