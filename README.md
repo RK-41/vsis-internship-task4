@@ -1,4 +1,4 @@
-﻿# Task4: CineFlix: Movie Database Website
+﻿# Task4: CineFlix - Movie Database Website
 
 The ultimate destination for discovering and exploring the world of cinema. Built with HTML, CSS, JavaScript, and powered by the TMDB API, the site offers robust search functionality, detailed movie pages, and embedded trailers and clips to provide a comprehensive and engaging movie experience.
 
