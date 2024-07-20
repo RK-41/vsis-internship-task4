@@ -225,6 +225,7 @@ body {
 }
 
 .btn {
+	margin: 5px 0;
 	color: var(--white);
 	font-size: var(--fs-button);
 	font-weight: var(--weight-bold);
